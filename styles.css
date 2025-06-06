@@ -1,0 +1,135 @@
+body {
+    background-color: #f8f1e9;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #2b2b2b;
+    display: block;
+    padding: 10px;
+}
+
+#bold {
+    font-weight: bold;
+}
+
+#code {
+    background-color: #6b6a6a;
+    color: white;
+    border: 1px solid black;
+}
+
+#navbar {
+    position: fixed;
+    border-right: 2px solid grey;
+    height: 100vh;
+}
+
+#main-doc {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20em;
+}
+
+#list_all_nav {
+    list-style: none;
+    padding-left: 0;
+}
+
+#list_all_nav li {
+    border-top: 1px solid gray;
+}
+
+#list_all_nav li:hover {
+    background-color: #c0bcb7;
+}
+
+#list_all_nav li:last-child {
+    border-bottom: 1px solid gray;
+}
+
+#table_example {
+    display: flex;
+    flex-direction: row;
+}
+
+#table_example #info {
+    width: 50%;
+    margin: 0;
+}
+
+#table_example #table {
+    width: 50%;
+    max-width: 400px;
+    margin: 0 auto;
+    max-height: auto;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+#table_example #table th {
+    background-color: gray;
+    border: 1px solid rgb(66, 66, 66);
+}
+
+#table_example #table td {
+    border: 1px solid gray;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #navbar {
+        position: unset;
+        width: 100vw;
+        border-right: none;
+        border-bottom: 2px solid gray;
+        margin-bottom: -10px;
+        height: auto;
+    }
+
+
+    #table_example {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    #table_example #info {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    #table_example #table {
+        margin: 0;
+        width: 100%;
+    }
+
+    #navbar li:last-child .nav-link {
+        padding-bottom: 0;
+    }
+
+    #navbar_header {
+        text-align: center;
+    }
+
+    #list_all_nav {
+        text-align: center;
+    }
+
+    #list_all_nav li:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    #main-doc {
+        margin-left: 0;
+    }
+
+}

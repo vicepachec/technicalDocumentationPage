@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Technical Documentation Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <nav id="navbar">
+    <header id="navbar_header">\
+      <h1 id="navbar_title">HTML and CSS knowledge</h1>
+    </header>
+    <ul id="list_all_nav">
+      <li id="list_line_nav"><a class="nav-link" href="#introduction">Introduction</a></li>
+      <li id="list_line_nav"><a class="nav-link" href="#table_elements">Table Elements</a></li>
+      <li id="list_line_nav"><a class="nav-link" href="#css_selectors">CSS Selectors</a></li>
+      <li id="list_line_nav"><a class="nav-link" href="#display_property">Display Property</a></li>
+      <li id="list_line_nav"><a class="nav-link" href="#borders">Borders</a></li>
+    </ul>
+  </nav>
+  <main id="main-doc">
+    <section class="main-section" id="introduction">
+      <header id="header">
+        <h1 id="title">Introduction</h1>
+      </header>
+      <p id="info">
+        Hello! In this website I am gonna try and explain some properties of
+        HTML with the knowledge I have currently. So if any information isn't
+        completly correct or complete, please bear with me!
+      </p>
+      <p id="info">These are some elements from which I took notes and thought I could somewhat explain, it isn't
+        explained properly, but
+        I did my best!</p>
+    </section>
+    <section class="main-section" id="table_elements">
+      <header id="header">
+        <h1 id="title">Table Elements</h1>
+      </header>
+      <p id="info">
+        This is how we create tables, we use a variety of elements to design
+        the table to our liking.
+      </p>
+      <p id="info">
+        To define a table we use the element
+        <code id="code">&lt;table&gt;&lt;/table&gt;</code>
+        After we have defined the table we need to set the cells by defining
+        the rows and collumns for that we use &lt;tr&gt;&lt;/tr&gt; for rows
+        and &lt;td&gt;&lt;/td&gt; or &lt;th&gt;&lt;/th&gt; for the collumns
+        <div id="table_example">
+          <p id="info">Here we have an example of a table, we use &lt;tr&gt;&lt;/tr&gt;
+            to define a single row and then we use &lt;th&gt;&lt;/th&gt; to define what the data inside the table is
+            related to(defining the header of the table), and then we use &lt;td&gt;&lt;/td&gt; for the data inside.
+          </p>
+          <table id="table">
+            <tr>
+              <th>Person 1</th>
+              <th>Person 2</th>
+              <th>Person 3</th>
+            </tr>
+            <tr>
+              <td>Emil</td>
+              <td>Tobias</td>
+              <td>Linus</td>
+            </tr>
+            <tr>
+              <td>16</td>
+              <td>14</td>
+              <td>10</td>
+            </tr>
+          </table>
+        </div>
+      </p>
+    </section>
+    <section class="main-section" id="css_selectors">
+      <header id="header">
+        <h1 id="title">Css Selectors</h1>
+      </header>
+      <p id="info">We use this selectors to help us with designing the page with CSS, so that we can be more specific
+        about which
+        elements we want to change. </p>
+      <p>Here are some examples:</p>
+      <ul id="list_all">
+        <li class="list_line"><span id="bold">Choosing by element:</span> we can select an element to change every
+          instance of that element at once by using the
+          name of the element we want to change, like for h1 we would simply write <code id="code">h1{}</code> and then
+          we put the styles within the brackets.</li>
+        <li class="list_line"><span id="bold">Change everything:</span> we can use the * selector to select and change
+          every single element within the hmtl code.</li>
+        <li class="list_line"><span id="bold">Choosing by id:</span> after we define and id for an element for example
+          &lt;ph id="paragraph"&gt; we can change that single element by selecting it's id to choose an ID we use the #
+          symbol like <code id="code">#paragraph{}</code> and then we can style only the elements that have that id.
+        </li>
+        <li class="list_line"><span id="bold">Choosing by class:</span> this follows the same logic of the id but with
+          classes for example using &lt;div class="container"&gt; we then can select only the elements with that
+          class, by using <code id="code">.container{}</code> and choosing the styles we want.</li>
+        <li class="list_line"><span id="bold">Specificity:</span> something important to know is that certain selectors
+          are more specific than others, if we have an &lt;div class="container"&gt; and we use <code
+            id="code">div{background-color:white} and .container{background-color: yellow}</code> how will the code know
+          which
+          one to use? That's when specificity comes into play, the order goes like this id>class>element, so in the
+          example i gave the background-color would be yellow, since classes are more specific than elements.</li>
+      </ul>
+    </section>
+    <section class="main-section" id="display_property">
+      <header id="header">
+        <h1 id="title">Display Property</h1>
+      </header>
+      <p>Display Property define how we want that element to behave since all of them have a default way of displaying
+        with this we can change it, so we can style things the way we prefer</p>
+      <p id="info">For display we have a few options to use.</p>
+      <ul id="list_all">
+        <li id="list_line"><span id="bold">Inline: </span> make the element behave as and Inline object, making it
+          ignore width, height, margin and padding, only pushes elements horizontally, for this we use <code
+            id="code">display: inline;</code></li>
+        <li id="list_line"><span id="bold">Block: </span> make the element take an entire block of the document, also
+          respects width, height, margin and padding, for this we use <code id="code">display: block;</code></li>
+        <li id="list_line"><span id="bold">Inline-block: </span> make the element and inline object, but have it respect
+          width, height, margin and padding, for this we use <code id="code">display: inline-block;</code></li>
+      </ul>
+    </section>
+    <section class="main-section" id="borders">
+      <header id="header">
+        <h1 id="title">Borders</h1>
+      </header>
+      <p id="info">We can also define borders to our elements to create separation or style our elements.</p>
+      <ul id="list_all">
+        <li id="list_line"><span id="bold">Border-widht:</span> we use this to define the widht of the border like for
+          example <code id="code">border-width: 2px;</code></li>
+        <li id="list_line"><span id="bold">Border-style:</span> we use this to define the style of the border like for
+          example <code id="code">border-style: dotted;</code></li>
+        <li id="list_line"><span id="bold">Border-color:</span> we use this to define the color of the border like for
+          example <code id="code">border-color: red;</code></li>
+        <li id="list_line"><span id="bold">Border:</span> we use this one to select all three at once for example
+          <code id="code">border: 2px dotted red;</code></li>
+      </ul>
+    </section>
+  </main>
+</body>
+
+</html>
